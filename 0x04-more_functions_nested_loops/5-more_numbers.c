@@ -1,33 +1,26 @@
-es (29 sloc)  381 Bytes
-
+#include <stdio.h>
 #include "main.h"
 
 /**
- * more_numbers - entry point
- *
- * Description: --
- * Return: --
- */
+*more_numbers - prints numbers to 14
+*
+*Return: returns nothing
+*/
+
 void more_numbers(void)
 {
-	char n;
-	int i = 0;
-	int j = 0;
+	int n1, n2;
 
-	while (i < 10)
+	for (n1 = 0; n1 < 10; n1++)
 	{
-		n = '0';
-		for (j = 0; j <= 14; j++)
+		for (n2 = 0; n2 <= 14; n2++)
 		{
-			/* 0 1 2 3 4 5 6 7 8 9 (n = 0) 0 1 2 3 4*/
-			if (j > 9)
-				_putchar('1');
-			if (n == 58)
-				n = '0';
-			_putchar(n);
-			n++;
+			if (n2 > 9)
+			{
+				putchar((n2 / 10) + '0');
+			}
+			putchar((n2 % 10) + '0');
 		}
-		i++;
-		_putchar('\n');
+		putchar(10);
 	}
 }
